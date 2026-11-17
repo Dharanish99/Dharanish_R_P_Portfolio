@@ -1,0 +1,501 @@
+.section {
+  position: relative;
+  padding: clamp(4.5rem, 8vw, 8rem) clamp(1.25rem, 5vw, 5.5rem);
+  overflow: hidden;
+  background: #183e32;
+  color: #f3efe5;
+  font-family: var(--font-inter), sans-serif;
+  scroll-margin-top: 0;
+}
+
+.inner {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1.1rem;
+  margin-bottom: clamp(3.25rem, 6vw, 5.5rem);
+  border-bottom: 1px solid rgb(189 210 182 / 27%);
+  font-size: 0.67rem;
+  font-weight: 500;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.sectionNumber {
+  margin-right: 1.15rem;
+  color: #bdd2b6;
+}
+
+.headerAside {
+  color: #bdd2b6;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(3rem, 7vw, 7rem);
+  align-items: center;
+}
+
+.editorial {
+  min-width: 0;
+}
+
+.heading {
+  margin: 0;
+  color: #f3efe5;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: clamp(2.5rem, 4.3vw, 4.4rem);
+  font-weight: 500;
+  line-height: 1.06;
+  letter-spacing: -0.065em;
+}
+
+.heading em {
+  display: inline-block;
+  margin-top: 0.12em;
+  color: #bdd2b6;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.12em;
+  font-weight: 400;
+  line-height: 1.03;
+  letter-spacing: -0.035em;
+}
+
+.intro {
+  max-width: 23.8rem;
+  margin: 1.85rem 0 0;
+  color: #d2d9cc;
+  font-size: 0.94rem;
+  line-height: 1.8;
+}
+
+.principle {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.3rem;
+  margin-top: 2.6rem;
+}
+
+.principleMark {
+  font-size: 2.3rem;
+  font-weight: 300;
+  line-height: 1;
+  color: #bdd2b6;
+}
+
+.microLabel {
+  display: block;
+  margin-bottom: 0.55rem;
+  color: #b7c9b2;
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.principle p {
+  margin: 0;
+  color: #f3efe5;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.explorer {
+  min-width: 0;
+}
+
+.switcher {
+  display: flex;
+  border-top: 1px solid rgb(189 210 182 / 30%);
+  border-bottom: 1px solid rgb(189 210 182 / 30%);
+}
+
+.studyButton {
+  position: relative;
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  min-height: 3.45rem;
+  padding: 0.75rem 0.5rem;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  background: transparent;
+  color: #c3d0bf;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.77rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease;
+}
+
+.studyButton + .studyButton {
+  border-left: 1px solid rgb(189 210 182 / 15%);
+}
+
+.studyButton:hover {
+  color: #f3efe5;
+  background: rgb(189 210 182 / 6%);
+}
+
+.studyButton[aria-pressed="true"] {
+  border-bottom-color: #bdd2b6;
+  background: rgb(189 210 182 / 9%);
+  color: #f3efe5;
+}
+
+.studyButton:focus-visible {
+  z-index: 1;
+  outline: 2px solid #f3efe5;
+  outline-offset: 4px;
+}
+
+.buttonNumber {
+  color: #b1c5aa;
+  font-size: 0.57rem;
+  font-weight: 400;
+}
+
+.selectionDot {
+  width: 0.25rem;
+  height: 0.25rem;
+  margin-left: 0.1rem;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: 0;
+}
+
+.studyButton[aria-pressed="true"] .selectionDot {
+  opacity: 1;
+}
+
+.figure {
+  margin: 0;
+}
+
+.diagramHeader {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.6rem;
+  color: #b9cbb3;
+  font-size: 0.61rem;
+  line-height: 1.5;
+  letter-spacing: 0.045em;
+}
+
+.figureNumber {
+  flex: 0 0 auto;
+  color: #a8bfa3;
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 0.9rem;
+  font-style: italic;
+  line-height: 1;
+}
+
+.diagram {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  align-items: end;
+  gap: 0.4rem;
+  margin-top: 1.2rem;
+  padding: 0.8rem 0.2rem 1.5rem;
+  background-image: radial-gradient(
+    rgb(189 210 182 / 15%) 0.7px,
+    transparent 0.7px
+  );
+  background-size: 19px 19px;
+}
+
+.section[data-motion="true"] .diagram {
+  animation: diagramEnter 380ms ease-out both;
+}
+
+.connectionLine {
+  position: absolute;
+  top: 5.4rem;
+  right: 17%;
+  left: 17%;
+  height: 1px;
+  background: rgb(189 210 182 / 42%);
+}
+
+.connectionLine span {
+  position: absolute;
+  top: -2px;
+  width: 5px;
+  height: 5px;
+  border-top: 1px solid #bdd2b6;
+  border-right: 1px solid #bdd2b6;
+  transform: rotate(45deg);
+}
+
+.connectionLine span:first-child {
+  left: 20%;
+}
+
+.connectionLine span:last-child {
+  right: 20%;
+}
+
+.diagramNode {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  text-align: center;
+}
+
+.outerDrawing,
+.engineDrawing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 9.2rem;
+  width: 100%;
+}
+
+.outerDrawing svg {
+  width: min(100%, 6rem);
+  height: auto;
+  background: #183e32;
+}
+
+.engineDrawing svg {
+  width: min(100%, 9.2rem);
+  height: auto;
+  background: #183e32;
+  border-radius: 50%;
+}
+
+.diagram svg {
+  display: block;
+  color: #bdd2b6;
+  stroke: currentColor;
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.solidPaper {
+  fill: #183e32;
+}
+
+.engineCore {
+  fill: #254e3c;
+  stroke: #bdd2b6;
+}
+
+.dotFill {
+  fill: #bdd2b6;
+  stroke: none;
+}
+
+.nodeStep {
+  display: block;
+  margin-top: 0.5rem;
+  color: #a8bfa3;
+  font-size: 0.5rem;
+  line-height: 1.5;
+  letter-spacing: 0.11em;
+}
+
+.nodeLabel {
+  display: block;
+  min-height: 2.6em;
+  margin-top: 0.45rem;
+  color: #f3efe5;
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.caption {
+  min-height: 8.7rem;
+  padding-top: 1.3rem;
+  border-top: 1px solid rgb(189 210 182 / 25%);
+}
+
+.caption h3 {
+  max-width: 27rem;
+  margin: 0;
+  color: #f3efe5;
+  font-family: var(--font-space-grotesk), sans-serif;
+  font-size: 1.12rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.025em;
+}
+
+.caption p {
+  max-width: 27rem;
+  margin: 0.65rem 0 1.4rem;
+  color: #c0d0ba;
+  font-size: 0.78rem;
+  line-height: 1.75;
+}
+
+.figureFooter {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.8rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid rgb(189 210 182 / 25%);
+  color: #b2c7ac;
+  font-size: 0.55rem;
+  line-height: 1.5;
+  letter-spacing: 0.035em;
+}
+
+@keyframes diagramEnter {
+  from {
+    opacity: 0.45;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1000px) {
+  .layout {
+    gap: 2.5rem;
+    grid-template-columns: 0.95fr 1.1fr;
+  }
+
+  .heading {
+    font-size: clamp(2.5rem, 4.7vw, 3.8rem);
+  }
+
+  .studyButton {
+    gap: 0.35rem;
+    font-size: 0.7rem;
+  }
+
+  .buttonNumber {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .section {
+    padding: 4rem 1.5rem;
+  }
+
+  .sectionHeader {
+    margin-bottom: 2.8rem;
+    font-size: 0.6rem;
+  }
+
+  .headerAside {
+    display: none;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .heading {
+    font-size: clamp(2.7rem, 7vw, 4rem);
+  }
+
+  .desktopBreak {
+    display: none;
+  }
+
+  .intro {
+    margin-top: 1.5rem;
+    max-width: 30rem;
+    font-size: 0.89rem;
+  }
+
+  .principle {
+    margin-top: 1.8rem;
+  }
+
+  .studyButton {
+    min-height: 3.6rem;
+    font-size: 0.77rem;
+  }
+
+  .diagram {
+    padding-top: 1rem;
+  }
+
+  .connectionLine {
+    top: 5.6rem;
+  }
+
+  .caption {
+    min-height: 8.4rem;
+  }
+
+  .caption h3 {
+    max-width: none;
+  }
+
+  .caption p {
+    max-width: none;
+  }
+}
+
+@media (max-width: 390px) {
+  .section {
+    padding-right: 1.1rem;
+    padding-left: 1.1rem;
+  }
+
+  .heading {
+    font-size: 2.45rem;
+  }
+
+  .studyButton {
+    gap: 0.3rem;
+    font-size: 0.7rem;
+  }
+
+  .selectionDot {
+    display: none;
+  }
+
+  .nodeLabel {
+    font-size: 0.64rem;
+  }
+
+  .nodeStep {
+    font-size: 0.45rem;
+    letter-spacing: 0.07em;
+  }
+
+  .figureFooter {
+    font-size: 0.5rem;
+  }
+}
+
+.section[data-motion="false"] .studyButton,
+.section[data-motion="false"] .diagram {
+  animation: none;
+  transition: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .section .studyButton,
+  .section[data-motion="true"] .diagram {
+    animation: none;
+    transition: none;
+  }
+}
